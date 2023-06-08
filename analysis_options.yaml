@@ -1,0 +1,24 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - build/**,
+    - lib/**.freezed.dart
+    - lib/**.g.dart
+    - test/**.mocks.dart
+    - lib/di/di.config.dart
+    - test/di/di.config.dart
+linter:
+  rules:
+    - unawaited_futures
+    - prefer_final_locals
+    - prefer_relative_imports
+    - camel_case_types
+    - annotate_overrides
+    - await_only_futures
+    - cancel_subscriptions
+    - close_sinks
+    - comment_references
+    - constant_identifier_names
+    - control_flow_in_finally
+    - empty_statements
