@@ -5,7 +5,6 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'di/di.dart';
 import 'presentation/config/bloc/config_cubit.dart';
-import 'router/app_router.dart';
 import 'router/app_router.gr.dart';
 
 void main() async {
@@ -25,7 +24,7 @@ Future<void> _lockPortraitOrientation() async {
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  MyApp({Key? key}) : super(key: key);
 
   final appRouter = getIt<AppRouter>();
 

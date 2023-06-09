@@ -1,4 +1,6 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.koczuba.jsonplaceholder_comments_images">
+
     <application
         android:label="jsonplaceholder_comments_images"
         android:name="${applicationName}"

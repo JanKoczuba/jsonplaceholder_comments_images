@@ -8,4 +8,4 @@ import 'di.config.dart';
 final getIt = GetIt.instance;
 
 @injectableInit
-FutureOr<void> configureDependencies() => getIt.init();
+FutureOr<void> configureDependencies() => $initGetIt(getIt);

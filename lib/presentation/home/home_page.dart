@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../config/bloc/config_cubit.dart';
 import 'widget/bottom_nav_icon_builder.dart';
 
-@RoutePage()
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
