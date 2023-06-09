@@ -1,4 +1,7 @@
 {
+  "@_COMMON": {},
+  "paginationBuilderError": "Wystąpil blad podczas ladowania danych",
+  "refresh": "Zaladuj ponownie",
   "@_BOTTOMNAVBAR": {},
   "bottomNavBarGallery": "Galeria",
   "bottomNavBarComments": "Komentarze"
