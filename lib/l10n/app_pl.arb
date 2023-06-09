@@ -2,6 +2,7 @@
   "@_COMMON": {},
   "paginationBuilderError": "Wystąpil blad podczas ladowania danych",
   "refresh": "Zaladuj ponownie",
+  "noInternetConnection": "Brak poaczenia z siecią, sprawdz swoje polaczenie",
   "@_BOTTOMNAVBAR": {},
   "bottomNavBarGallery": "Galeria",
   "bottomNavBarComments": "Komentarze"

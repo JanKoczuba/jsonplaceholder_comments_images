@@ -16,5 +16,9 @@ class AppRouter extends $AppRouter {
       AutoRoute(page: CommentsRoute.page),
       AutoRoute(page: ImageGalleryRoute.page),
     ]),
+    CustomRoute(
+      page: NoInternetConnectionRoute.page,
+      transitionsBuilder: TransitionsBuilders.noTransition,
+    ),
   ];
 }
