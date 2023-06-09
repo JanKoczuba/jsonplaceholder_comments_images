@@ -2,9 +2,9 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../router/app_router.gr.dart';
-import '../../../../utils/context_extension.dart';
-import '../../bloc/bottom_bar_cubit.dart';
+import '../../../router/app_router.gr.dart';
+import '../../../utils/context_extension.dart';
+import '../../config/bloc/config_cubit.dart';
 
 class BottomNavBarIcon {
   final Key? key;
@@ -33,7 +33,7 @@ class BottomNavIconBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<BottomBarCubit, BottomBarState>(
+    return BlocBuilder<ConfigCubit, ConfigState>(
       builder: (context, state) {
         final bottomNavIcon = [
           BottomNavBarIcon(

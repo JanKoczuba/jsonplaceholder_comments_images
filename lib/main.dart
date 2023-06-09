@@ -4,8 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'di/di.dart';
-import 'presentation/bottom_bar/bloc/bottom_bar_cubit.dart';
+import 'presentation/config/bloc/config_cubit.dart';
 import 'router/app_router.dart';
+import 'router/app_router.gr.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,14 +32,30 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<BottomBarCubit>(),
-      child: MaterialApp.router(
-        debugShowCheckedModeBanner: false,
-        localizationsDelegates: AppLocalizations.localizationsDelegates,
-        supportedLocales: AppLocalizations.supportedLocales,
-        routerDelegate: appRouter.delegate(),
-        routeInformationParser: appRouter.defaultRouteParser(),
-      ),
+      create: (context) => getIt<ConfigCubit>(),
+      child: Builder(builder: (context) {
+        return BlocListener<ConfigCubit, ConfigState>(
+          listenWhen: (previous, current) =>
+              current.hasInternetConnection != previous.hasInternetConnection,
+          listener: (context, state) {
+            if (!state.hasInternetConnection) {
+              appRouter.push(NoInternetConnectionRoute(
+                onRefresh: () =>
+                    context.read<ConfigCubit>().checkInternetConnection(),
+              ));
+            } else {
+              appRouter.pop();
+            }
+          },
+          child: MaterialApp.router(
+            debugShowCheckedModeBanner: false,
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            supportedLocales: AppLocalizations.supportedLocales,
+            routerDelegate: appRouter.delegate(),
+            routeInformationParser: appRouter.defaultRouteParser(),
+          ),
+        );
+      }),
     );
   }
 }
