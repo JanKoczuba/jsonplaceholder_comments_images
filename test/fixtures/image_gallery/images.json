@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "albumId": 1,
+    "title": "image name",
+    "thumbnailUrl": "thumbnail url",
+    "url": "image url"
+  },
+  {
+    "id": 1,
+    "albumId": 2,
+    "title": "image name",
+    "thumbnailUrl": "thumbnail url",
+    "url": "image url"
+  }
+]
