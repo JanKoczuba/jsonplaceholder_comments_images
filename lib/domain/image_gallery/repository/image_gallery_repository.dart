@@ -1,4 +1,4 @@
-import 'package:dartz/dartz.dart';
+import 'package:fpdart/fpdart.dart';
 
 import '../../core/failure.dart';
 import '../entity/gallery_image.dart';
