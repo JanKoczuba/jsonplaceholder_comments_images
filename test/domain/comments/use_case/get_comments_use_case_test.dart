@@ -1,4 +1,4 @@
-import 'package:dartz/dartz.dart';
+import 'package:fpdart/fpdart.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:jsonplaceholder_comments_images/domain/comments/entity/comment.dart';
 import 'package:jsonplaceholder_comments_images/domain/comments/repository/comments_repository.dart';
@@ -35,7 +35,7 @@ void main() {
 
   test(
     'should get comments from the repository',
-        () async {
+    () async {
       when(repository.getComments(page))
           .thenAnswer((_) async => right(tComments));
       final result = await useCase.execute(page);
@@ -46,7 +46,7 @@ void main() {
   );
   test(
     'should return failure from the repository on fail',
-        () async {
+    () async {
       when(repository.getComments(page))
           .thenAnswer((_) async => left(const Failure.unknown()));
       final result = await useCase.execute(page);
