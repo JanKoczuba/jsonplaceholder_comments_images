@@ -6,7 +6,7 @@ import 'api/image_gallery_api.dart';
 
 @module
 abstract class ImageGalleryModule {
-  @lazySingleton
+  @LazySingleton(env: [Environment.prod])
   ImageGalleryApi provideImageGalleryApi(
     @Named(mainDioName) Dio dio,
   ) {

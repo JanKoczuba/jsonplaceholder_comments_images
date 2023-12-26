@@ -6,7 +6,7 @@ import 'api/comments_api.dart';
 
 @module
 abstract class CommentModule {
-  @lazySingleton
+  @LazySingleton(env: [Environment.prod])
   CommentsApi provideCommentsApi(
     @Named(mainDioName) Dio dio,
   ) {
