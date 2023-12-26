@@ -7,7 +7,7 @@ import 'package:jsonplaceholder_comments_images/infrastructure/comments/api/comm
 import 'package:jsonplaceholder_comments_images/infrastructure/comments/repository/api_comments_repository.dart';
 import 'package:mocktail/mocktail.dart';
 
-import '../../../fixtures/models/comments.dart';
+import '../../../fixtures/comments/models/comments.dart';
 import '../../core/fake_api.dart';
 
 class MockCommentsApi extends Mock implements CommentsApi {}

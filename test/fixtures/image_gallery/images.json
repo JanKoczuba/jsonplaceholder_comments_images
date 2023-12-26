@@ -2,15 +2,22 @@
   {
     "id": 1,
     "albumId": 1,
-    "title": "image name",
-    "thumbnailUrl": "thumbnail url",
-    "url": "image url"
+    "title": "title",
+    "thumbnailUrl": "assets/test/150x150.png",
+    "url": "assets/test/600x600.png"
   },
   {
-    "id": 1,
+    "id": 2,
     "albumId": 2,
-    "title": "image name",
-    "thumbnailUrl": "thumbnail url",
-    "url": "image url"
+    "title": "title",
+    "thumbnailUrl": "assets/test/150x150.png",
+    "url": "assets/test/600x600.png"
+  },
+  {
+    "id": 3,
+    "albumId": 3,
+    "title": "title",
+    "thumbnailUrl": "assets/test/150x150.png",
+    "url": "assets/test/600x600.png"
   }
 ]

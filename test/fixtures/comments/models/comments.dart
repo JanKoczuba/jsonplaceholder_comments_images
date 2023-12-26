@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:jsonplaceholder_comments_images/domain/comments/entity/comment.dart';
 import 'package:jsonplaceholder_comments_images/infrastructure/comments/model/get_comments_response.dart';
 
-import '../fixture_reader.dart';
+import '../../fixture_reader.dart';
 
 Map<String, dynamic> get commentJsonMocked =>
     jsonDecode(fixture('comments/comment.json'));
