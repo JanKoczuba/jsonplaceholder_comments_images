@@ -9,10 +9,17 @@ void main() {
 
     final response = GetImageResponse.fromJson(json);
 
-    expect(response.id, imagesJsonMocked['id']);
-    expect(response.albumId, imagesJsonMocked['albumId']);
-    expect(response.title, imagesJsonMocked['title']);
-    expect(response.thumbnailUrl, imagesJsonMocked['thumbnailUrl']);
-    expect(response.url, imagesJsonMocked['url']);
+    expect(response.id, json['id']);
+    expect(response.albumId, json['albumId']);
+    expect(response.title, json['title']);
+    expect(response.thumbnailUrl, json['thumbnailUrl']);
+    expect(response.url, json['url']);
+    expect(response.props, [
+      json['id'],
+      json['albumId'],
+      json['title'],
+      json['thumbnailUrl'],
+      json['url'],
+    ]);
   });
 }

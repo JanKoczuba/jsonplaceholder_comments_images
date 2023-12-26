@@ -9,10 +9,17 @@ void main() {
 
     final response = GetCommentsResponse.fromJson(json);
 
-    expect(response.id, commentJsonMocked['id']);
-    expect(response.postId, commentJsonMocked['postId']);
-    expect(response.name, commentJsonMocked['name']);
-    expect(response.email, commentJsonMocked['email']);
-    expect(response.body, commentJsonMocked['body']);
+    expect(response.id, json['id']);
+    expect(response.postId, json['postId']);
+    expect(response.name, json['name']);
+    expect(response.email, json['email']);
+    expect(response.body, json['body']);
+    expect(response.props, [
+      json['id'],
+      json['postId'],
+      json['name'],
+      json['email'],
+      json['body'],
+    ]);
   });
 }

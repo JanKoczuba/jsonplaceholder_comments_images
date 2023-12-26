@@ -3,7 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'get_comments_response.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(createToJson: false)
 class GetCommentsResponse extends Equatable {
   const GetCommentsResponse({
     required this.id,

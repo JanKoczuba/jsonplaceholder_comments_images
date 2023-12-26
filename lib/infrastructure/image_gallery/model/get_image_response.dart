@@ -3,7 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'get_image_response.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(createToJson: false)
 class GetImageResponse extends Equatable {
   const GetImageResponse({
     required this.id,
