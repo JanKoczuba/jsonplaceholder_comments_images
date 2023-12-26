@@ -6,7 +6,7 @@ import 'widget/comments.dart';
 
 @RoutePage()
 class CommentsPage extends StatefulWidget {
-  const CommentsPage({Key? key}) : super(key: key);
+  const CommentsPage({super.key});
 
   @override
   State<CommentsPage> createState() => _CommentsPageState();

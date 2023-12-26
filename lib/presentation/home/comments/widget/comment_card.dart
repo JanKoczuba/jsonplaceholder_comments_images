@@ -8,8 +8,8 @@ import '../../../resource/app_text_style.dart';
 class CommentCard extends StatelessWidget {
   const CommentCard({
     required this.comment,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final Comment comment;
 

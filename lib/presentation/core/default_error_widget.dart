@@ -6,8 +6,8 @@ class DefaultErrorWidget extends StatelessWidget {
   const DefaultErrorWidget({
     required this.message,
     required this.onRefresh,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
   final String message;
   final VoidCallback onRefresh;
 

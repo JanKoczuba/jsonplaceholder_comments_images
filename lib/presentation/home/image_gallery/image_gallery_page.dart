@@ -6,7 +6,7 @@ import 'widget/image_gallery.dart';
 
 @RoutePage()
 class ImageGalleryPage extends StatefulWidget {
-  const ImageGalleryPage({Key? key}) : super(key: key);
+  const ImageGalleryPage({super.key});
 
   @override
   State<ImageGalleryPage> createState() => _ImageGalleryPageState();

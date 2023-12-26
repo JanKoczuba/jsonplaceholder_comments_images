@@ -9,8 +9,8 @@ import '../../resource/app_padding.dart';
 class NoInternetConnectionPage extends StatelessWidget {
   const NoInternetConnectionPage({
     required this.onRefresh,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final VoidCallback onRefresh;
 

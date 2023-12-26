@@ -10,7 +10,7 @@ import '../../../core/default_error_widget.dart';
 import 'image_item.dart';
 
 class ImageGallery extends StatefulWidget {
-  const ImageGallery({Key? key}) : super(key: key);
+  const ImageGallery({super.key});
 
   @override
   State<ImageGallery> createState() => _ImageGalleryState();

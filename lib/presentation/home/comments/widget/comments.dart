@@ -10,7 +10,7 @@ import '../../../core/default_error_widget.dart';
 import 'comment_card.dart';
 
 class Comments extends StatefulWidget {
-  const Comments({Key? key}) : super(key: key);
+  const Comments({super.key});
 
   @override
   State<Comments> createState() => _CommentsState();

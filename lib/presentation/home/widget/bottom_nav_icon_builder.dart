@@ -25,9 +25,9 @@ typedef IconBottomBarWidgetBuilder = Widget Function(BuildContext context,
 
 class BottomNavIconBuilder extends StatelessWidget {
   const BottomNavIconBuilder({
-    Key? key,
+    super.key,
     required this.builder,
-  }) : super(key: key);
+  });
 
   final IconBottomBarWidgetBuilder builder;
 

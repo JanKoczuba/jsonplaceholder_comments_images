@@ -5,8 +5,8 @@ class ImageItem extends StatelessWidget {
   const ImageItem({
     required this.imageUrl,
     this.loadingWidget,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final String imageUrl;
   final Widget? loadingWidget;
