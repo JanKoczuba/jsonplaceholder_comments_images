@@ -4,10 +4,10 @@ import 'package:internet_connection_checker/internet_connection_checker.dart';
 import '../service/config_service.dart';
 
 @injectable
-class OnInternetConnectionChanged {
+class OnInternetConnectionChangedUseCase {
   final ConfigService _configService;
 
-  OnInternetConnectionChanged(this._configService);
+  OnInternetConnectionChangedUseCase(this._configService);
 
   Stream<InternetConnectionStatus> execute() => _configService.onStatusChange;
 }
