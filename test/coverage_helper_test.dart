@@ -5,6 +5,7 @@ import 'package:jsonplaceholder_comments_images/infrastructure/comments/reposito
 import 'package:jsonplaceholder_comments_images/infrastructure/comments/model/get_comments_response.dart'; // ignore: unused_import
 import 'package:jsonplaceholder_comments_images/infrastructure/comments/api/comments_api.dart'; // ignore: unused_import
 import 'package:jsonplaceholder_comments_images/infrastructure/core/services/base_api_service.dart'; // ignore: unused_import
+import 'package:jsonplaceholder_comments_images/infrastructure/config/service/internet_connection_service.dart'; // ignore: unused_import
 import 'package:jsonplaceholder_comments_images/infrastructure/image_gallery/repository/api_image_gallery_repository.dart'; // ignore: unused_import
 import 'package:jsonplaceholder_comments_images/infrastructure/image_gallery/model/get_image_response.dart'; // ignore: unused_import
 import 'package:jsonplaceholder_comments_images/infrastructure/image_gallery/api/image_gallery_api.dart'; // ignore: unused_import
@@ -12,6 +13,9 @@ import 'package:jsonplaceholder_comments_images/domain/comments/repository/comme
 import 'package:jsonplaceholder_comments_images/domain/comments/entity/comment.dart'; // ignore: unused_import
 import 'package:jsonplaceholder_comments_images/domain/comments/use_case/get_comments_use_case.dart'; // ignore: unused_import
 import 'package:jsonplaceholder_comments_images/domain/core/failure.dart'; // ignore: unused_import
+import 'package:jsonplaceholder_comments_images/domain/config/use_case/check_internet_connection_status_usecase.dart'; // ignore: unused_import
+import 'package:jsonplaceholder_comments_images/domain/config/use_case/on_internet_conection_changed_use_case.dart'; // ignore: unused_import
+import 'package:jsonplaceholder_comments_images/domain/config/service/config_service.dart'; // ignore: unused_import
 import 'package:jsonplaceholder_comments_images/domain/image_gallery/repository/image_gallery_repository.dart'; // ignore: unused_import
 import 'package:jsonplaceholder_comments_images/domain/image_gallery/entity/gallery_image.dart'; // ignore: unused_import
 import 'package:jsonplaceholder_comments_images/domain/image_gallery/use_case/get_gallery_images_use_case.dart'; // ignore: unused_import
