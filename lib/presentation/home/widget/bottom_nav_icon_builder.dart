@@ -31,19 +31,22 @@ class BottomNavIconBuilder extends StatelessWidget {
 
   final IconBottomBarWidgetBuilder builder;
 
+  static const keyImageGalleryTabButton = Key("ImageGalleryTabButton");
+  static const keyCommentsTabButton = Key("CommentsTabButton");
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ConfigCubit, ConfigState>(
       builder: (context, state) {
         final bottomNavIcon = [
           BottomNavBarIcon(
-            key: const ValueKey("ImageGalleryTabButton"),
+            key: keyImageGalleryTabButton,
             icon: const Icon(Icons.image),
             label: context.localizations.bottomNavBarGallery,
             route: const ImageGalleryRoute(),
           ),
           BottomNavBarIcon(
-            key: const ValueKey("CommentsTabButton"),
+            key: keyCommentsTabButton,
             icon: const Icon(Icons.comment),
             label: context.localizations.bottomNavBarComments,
             route: const CommentsRoute(),
