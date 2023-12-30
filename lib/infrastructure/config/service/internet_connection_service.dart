@@ -3,7 +3,7 @@ import 'package:internet_connection_checker/internet_connection_checker.dart';
 
 import '../../../domain/config/service/config_service.dart';
 
-@LazySingleton(as: ConfigService)
+@Injectable(as: ConfigService, env: [Environment.prod])
 class InternetConnectionService implements ConfigService {
   final _internetConnectionChecker = InternetConnectionChecker();
 

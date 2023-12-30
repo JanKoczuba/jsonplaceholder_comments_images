@@ -13,10 +13,15 @@ class ImageItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CachedNetworkImage(
-      imageUrl: imageUrl,
-      errorWidget: (context, url, error) => const Icon(Icons.error),
-      placeholder: (context, url) => loadingWidget ?? const SizedBox(),
-    );
+    return imageUrl.startsWith('http')
+        ? CachedNetworkImage(
+            imageUrl: imageUrl,
+            errorWidget: (context, url, error) => const Icon(Icons.error),
+            placeholder: (context, url) => loadingWidget ?? const SizedBox(),
+          )
+        : Image.asset(
+            imageUrl,
+            errorBuilder: (context, url, error) => const Icon(Icons.error),
+          );
   }
 }
