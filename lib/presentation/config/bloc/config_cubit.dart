@@ -21,7 +21,7 @@ class ConfigCubit extends Cubit<ConfigState> {
         _onInternetConnectionChanged.execute().listen(_updateConnectionStatus);
   }
 
-  final OnInternetConnectionChanged _onInternetConnectionChanged;
+  final OnInternetConnectionChangedUseCase _onInternetConnectionChanged;
   final CheckInternetConnectionUseCase _checkInternetConnectionUseCase;
   late StreamSubscription<InternetConnectionStatus>
       _internetConnectionSubscription;

@@ -8,12 +8,12 @@ class MockConfigService extends Mock implements ConfigService {}
 
 void main() {
   late MockConfigService mockConfigService;
-  late OnInternetConnectionChanged onInternetConnectionChanged;
+  late OnInternetConnectionChangedUseCase onInternetConnectionChanged;
 
   setUp(() {
     mockConfigService = MockConfigService();
     onInternetConnectionChanged =
-        OnInternetConnectionChanged(mockConfigService);
+        OnInternetConnectionChangedUseCase(mockConfigService);
   });
 
   group('OnInternetConnectionChanged', () {
