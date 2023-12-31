@@ -34,8 +34,8 @@ class _CommentsState extends State<Comments> {
   }
 
   Future<void> _fetchPage(int pageKey) async {
-    final newPhotos = await getIt<GetCommentsUseCase>().execute(pageKey);
-    newPhotos.fold(
+    final newComments = await getIt<GetCommentsUseCase>().execute(pageKey);
+    newComments.fold(
       (l) => _pagingController.error = l,
       (photos) {
         final isLastPage = photos.length < Constants.commentsItemLimit;
@@ -51,11 +51,13 @@ class _CommentsState extends State<Comments> {
 
   @override
   Widget build(BuildContext context) => PagedListView<int, Comment>(
+        key: const Key('paged_list_view'),
         pagingController: _pagingController,
         builderDelegate: PagedChildBuilderDelegate<Comment>(
           firstPageErrorIndicatorBuilder: (context) => _paginationErrorWidget(),
           newPageErrorIndicatorBuilder: (context) => _paginationErrorWidget(),
           itemBuilder: (context, comment, index) => CommentCard(
+            key: Key('comments_card_$index'),
             comment: comment,
           ),
         ),
@@ -63,6 +65,7 @@ class _CommentsState extends State<Comments> {
 
   _paginationErrorWidget() {
     return DefaultErrorWidget(
+      key: const Key('default_error_widget'),
       message: context.localizations.paginationBuilderError,
       onRefresh: () => _pagingController.refresh(),
     );
